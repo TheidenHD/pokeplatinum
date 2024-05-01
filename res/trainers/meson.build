@@ -1,7 +1,7 @@
 trainer_data_files = []
 
 foreach i : range(928)
-    i_fname = run_command('printf', '%04d.json', i.to_string(), check: true).stdout()
+    i_fname = i.to_string(fill: 4) + '.json'
     trainer_data_files += i_fname
 endforeach
 
